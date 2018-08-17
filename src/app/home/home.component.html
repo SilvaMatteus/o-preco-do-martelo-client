@@ -1,9 +1,27 @@
-<div class="container text-center">
+<div class="container">
+  <!-- Opções -->
   <div class="row">
-    <h3>Quantas {{ metrica }} poderíamos ter com... </h3>
+    <button type="button" (click)="setMetrica('Moradias Populares'); setIcon('fa fa-home fa-2x')" class="btn btn-outline-info"><i class="fa fa-home fa-5x" aria-hidden="true"></i></button>
+    <button type="button" (click)="setMetrica('Ambulâncias'); setIcon('fa fa-ambulance fa-2x')" class="btn btn-outline-danger"><i class="fa fa-ambulance fa-5x" aria-hidden="true"></i></button>
   </div>
+
   <div class="row">
-    <i class="fa fa-home fa-5x" aria-hidden="true"></i>
-    <i class="fa fa-ambulance fa-5x" aria-hidden="true"></i>
+    <h4>Qual é o preço do martelo em {{ metrica }}?</h4>
   </div>
+
+  <hr>
+  <!-- Visualização -->
+  <div class="container">
+    <div class="text-center" *ngFor="let aux of auxilios">
+      <h4>{{ aux.nome }} <i class="{{ aux.icon }}" aria-hidden="true"></i>:</h4>
+      <div class="i-am-centered">
+        <div class="row">
+          <div *ngFor="let i of genArray(aux.valor)">
+            <i class="{{ metricIcon }}"></i>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div> 
 </div>

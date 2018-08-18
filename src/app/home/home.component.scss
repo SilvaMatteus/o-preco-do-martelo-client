@@ -11,7 +11,27 @@ btn + btn {
     border: 4px;
 }
 
+.slider-seletor {
+    margin-bottom: 2rem;
+}
+
+.seletores {
+    padding-top: 2rem;
+    height: 100vh;
+    background-color:#5f87c6;
+    color: white;
+}
+
+.cards {
+    height: 100vh;
+    overflow-y: auto;
+}
+
 .row-custom {
     padding-top: 1rem;
     padding-bottom: 1rem;   
 }
+
+mat-slider {
+    width: 300px;
+  }

@@ -12,6 +12,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
  @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+ @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
  :root {
    --blue: #4582EC;
    --indigo: #6610f2;

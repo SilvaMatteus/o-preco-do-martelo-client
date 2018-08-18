@@ -5,60 +5,54 @@
       <div class="titulo-app-div">
         <img src="./assets/logo.png" width="40%">
       </div>
-      <div class="slider-seletor" *ngFor="let aux of auxilios">
-        <div class="titulo-slider">{{ aux.nome }}</div>
-        <mat-slider min="0" max="25750" step="100" value="1" thumbLabel tickInterval="1"></mat-slider>
+      <div class="slider-seletor">
+        <div class="titulo-slider">Auxílio Moradia: {{ auxMoradiaEscolhido | currency:'BRL' }}</div>
+      <mat-slider min="0" max="{{ auxMoradia }}" step="100" [value]="auxMoradiaEscolhido" (change)="setAuxMoradiaEscolhido($event)"  tickInterval="1"></mat-slider>
+        <div class="d-flex justify-content-between">
+          <div>0</div>
+          <div>{{ auxMoradia | currency:'BRL' }}</div>
+        </div>
       </div>
-      <h2>Crédito: {{ credito }}</h2>
+      <div class="slider-seletor">
+          <div class="titulo-slider">Pré Escola: {{ auxPreEscolaEscolhido | currency:'BRL' }}</div>
+          <mat-slider min="0" max="{{ auxPreEscola }}" step="100" [value]="auxPreEscolaEscolhido" (change)="setAuxPreEscolaEscolhido($event)" thumbLabel tickInterval="1"></mat-slider>
+          <div class="d-flex justify-content-between">
+            <div>0</div>
+            <div>{{ auxPreEscola | currency:'BRL' }}</div>
+          </div>
+      </div>
+      <div class="slider-seletor">
+          <div class="titulo-slider">Saúde: {{ auxSaudeEscolhido | currency:'BRL' }}</div>
+          <mat-slider min="0" max="{{ auxSaude }}" step="100" [value]="auxSaudeEscolhido" (change)="setAuxSaudeEscolhido($event)" thumbLabel tickInterval="1"></mat-slider>
+          <div class="d-flex justify-content-between">
+            <div>0</div>
+            <div>{{ auxSaude | currency:'BRL' }}</div>
+          </div>
+      </div>
+      <div class="slider-seletor">
+          <div class="titulo-slider">Outros: {{ auxOutrosEscolhido | currency:'BRL' }}</div>
+          <mat-slider min="0" max="{{ auxOutros }}" step="100" [value]="auxOutrosEscolhido" (change)="setAuxOutrosEscolhido($event)" thumbLabel tickInterval="1"></mat-slider>
+          <div class="d-flex justify-content-between">
+            <div>0</div>
+            <div>{{ auxOutros | currency:'BRL' }}</div>
+          </div>
+      </div>
+      <h2>Crédito: {{ getCreditos() | currency:'BRL' }}</h2>
+
     </div>
     <!-- Produtos -->
     <div class="col-md-8 cards">
       <div class="row">
-        <div class="col-md-4 " *ngFor="let produto of getProdutos()">
+        <div class="col-md-6 col-lg-4 " *ngFor="let produto of produtos;let i = index;">
             <div class="card-interno mb-3">
+              <div class="card-titulo">
                 <h3>{{ produto.nome }}</h3>
-                <input type="number" min="0" max="100"> unidades!
+              </div>  
+              <input type="number" min="0" max="100" [(ngModel)]="produtos[i].qtd"> unidades!
             </div>
         </div>
+        <h4>{{ msg }}</h4>
       </div>
     </div>
   </div>
 </div>
-
-<!-- 
-  moradia
-  pre escola
-  outros
-  saúde
- -->
-
-
-
-
-
-
-
-
-
-<!--
-<div class="container">
-  <div class="row-custom">
-    <h4>Qual é o preço do martelo em {{ metrica }}?</h4>
-  </div>
-  <mat-slider min="0" max="25750" step="100" value="1" thumbLabel tickInterval="1"></mat-slider>
-  <hr>
-  <div class="container">
-    <div class="text-center" *ngFor="let aux of auxilios">
-      <h4>{{ aux.nome }} <i class="{{ aux.icon }}" aria-hidden="true"></i>:</h4>
-      <div class="i-am-centered">
-        <div class="row">
-          <div *ngFor="let i of genArray(aux.valor)">
-            <i class="{{ metricIcon }}"></i>
-          </div>
-        </div>
-      </div>
-      <br>
-    </div>
-  </div> 
-</div>
--->

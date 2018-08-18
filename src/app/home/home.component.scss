@@ -20,7 +20,7 @@ btn + btn {
 }
 
 .slider-seletor {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .seletores {
@@ -28,6 +28,7 @@ btn + btn {
     height: 100vh;
     background-color: $color;
     color: $textcolor;
+    overflow-y: auto;
 }
 
 .cards {
@@ -39,6 +40,10 @@ btn + btn {
 .card-interno {
     border: solid 5px $color;
     padding: 1rem;
+}
+
+.card-titulo {
+    min-height: 100px;
 }
 
 .titulo-app {

@@ -1,11 +1,11 @@
 <div class="container">
   <!-- Opções -->
-  <div class="row">
-    <button type="button" (click)="setMetrica('Moradias Populares'); setIcon('fa fa-home fa-2x')" class="btn btn-outline-info"><i class="fa fa-home fa-5x" aria-hidden="true"></i></button>
-    <button type="button" (click)="setMetrica('Ambulâncias'); setIcon('fa fa-ambulance fa-2x')" class="btn btn-outline-danger"><i class="fa fa-ambulance fa-5x" aria-hidden="true"></i></button>
+  <div class="row-custom">
+    <button type="button" (click)="setMetrica('Moradias Populares'); setIcon('fa fa-home fa-2x')" class="btn btn-outline-info btn-custom" [class.active]="metrica === 'Moradias Populares'"><i class="fa fa-home fa-5x" aria-hidden="true"></i></button>
+    <button type="button" (click)="setMetrica('Ambulâncias'); setIcon('fa fa-ambulance fa-2x')" class="btn btn-outline-danger btn-custom" [class.active]="metrica === 'Ambulâncias'"><i class="fa fa-ambulance fa-5x" aria-hidden="true"></i></button>
   </div>
 
-  <div class="row">
+  <div class="row-custom">
     <h4>Qual é o preço do martelo em {{ metrica }}?</h4>
   </div>
 

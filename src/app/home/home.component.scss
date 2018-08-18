@@ -1,3 +1,11 @@
+$color: #1e262c; 
+$textcolor: #d2d3d5;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+.customfont {
+    font-family: 'Montserrat', sans-serif;
+}
+
 btn + btn {
     margin-left: 30px;
 }
@@ -18,13 +26,29 @@ btn + btn {
 .seletores {
     padding-top: 2rem;
     height: 100vh;
-    background-color:#5f87c6;
-    color: white;
+    background-color: $color;
+    color: $textcolor;
 }
 
 .cards {
+    padding-top: 1rem;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: auto; 
+}
+
+.card-interno {
+    border: solid 5px $color;
+    padding: 1rem;
+}
+
+.titulo-app {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.titulo-app-div {
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .row-custom {

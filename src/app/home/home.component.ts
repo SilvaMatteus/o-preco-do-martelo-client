@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit {
       - this.getTotalCompras();
     if (sum < 0) {
       this.setMsg(true);
-      return "Acabou! ='("
+      return 0;
     } else {
       this.setMsg(false);
       return sum;

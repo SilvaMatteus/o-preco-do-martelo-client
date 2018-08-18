@@ -8,40 +8,25 @@
       <div class="slider-seletor">
         <div class="titulo-slider">Auxílio Moradia: {{ auxMoradiaEscolhido | currency:'BRL' }}</div>
       <mat-slider min="0" max="{{ auxMoradia }}" step="100" [value]="auxMoradiaEscolhido" (change)="setAuxMoradiaEscolhido($event)"  tickInterval="1"></mat-slider>
-        <div class="d-flex justify-content-between">
-          <div>0</div>
-          <div>{{ auxMoradia | currency:'BRL' }}</div>
-        </div>
       </div>
       <div class="slider-seletor">
-          <div class="titulo-slider">Pré Escola: {{ auxPreEscolaEscolhido | currency:'BRL' }}</div>
-          <mat-slider min="0" max="{{ auxPreEscola }}" step="100" [value]="auxPreEscolaEscolhido" (change)="setAuxPreEscolaEscolhido($event)" thumbLabel tickInterval="1"></mat-slider>
-          <div class="d-flex justify-content-between">
-            <div>0</div>
-            <div>{{ auxPreEscola | currency:'BRL' }}</div>
-          </div>
+          <div class="titulo-slider">Auxílio Pré Escola: {{ auxPreEscolaEscolhido | currency:'BRL' }}</div>
+          <mat-slider min="0" max="{{ auxPreEscola }}" step="100" [value]="auxPreEscolaEscolhido" (change)="setAuxPreEscolaEscolhido($event)" tickInterval="1"></mat-slider>
       </div>
       <div class="slider-seletor">
-          <div class="titulo-slider">Saúde: {{ auxSaudeEscolhido | currency:'BRL' }}</div>
-          <mat-slider min="0" max="{{ auxSaude }}" step="100" [value]="auxSaudeEscolhido" (change)="setAuxSaudeEscolhido($event)" thumbLabel tickInterval="1"></mat-slider>
-          <div class="d-flex justify-content-between">
-            <div>0</div>
-            <div>{{ auxSaude | currency:'BRL' }}</div>
-          </div>
+          <div class="titulo-slider">Auxílio Saúde: {{ auxSaudeEscolhido | currency:'BRL' }}</div>
+          <mat-slider min="0" max="{{ auxSaude }}" step="100" [value]="auxSaudeEscolhido" (change)="setAuxSaudeEscolhido($event)" tickInterval="1"></mat-slider>
       </div>
       <div class="slider-seletor">
           <div class="titulo-slider">Outros: {{ auxOutrosEscolhido | currency:'BRL' }}</div>
-          <mat-slider min="0" max="{{ auxOutros }}" step="100" [value]="auxOutrosEscolhido" (change)="setAuxOutrosEscolhido($event)" thumbLabel tickInterval="1"></mat-slider>
-          <div class="d-flex justify-content-between">
-            <div>0</div>
-            <div>{{ auxOutros | currency:'BRL' }}</div>
-          </div>
+          <mat-slider min="0" max="{{ auxOutros }}" step="100" [value]="auxOutrosEscolhido" (change)="setAuxOutrosEscolhido($event)" tickInterval="1"></mat-slider>
       </div>
       <h2>Crédito: {{ getCreditos() | currency:'BRL' }}</h2>
 
     </div>
     <!-- Produtos -->
     <div class="col-md-8 cards">
+      <h4>{{ msg }}</h4>
       <div class="row">
         <div class="col-md-6 col-lg-4 " *ngFor="let produto of produtos;let i = index;">
             <div class="card-interno mb-3">
@@ -51,7 +36,6 @@
               <input type="number" min="0" max="100" [(ngModel)]="produtos[i].qtd"> unidades!
             </div>
         </div>
-        <h4>{{ msg }}</h4>
       </div>
     </div>
   </div>

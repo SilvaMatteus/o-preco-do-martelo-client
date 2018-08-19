@@ -2,8 +2,22 @@
   <div class="row">
     <!-- Controles -->
     <div class="col-md-4 seletores">
-      <div class="titulo-app-div">
-        <img src="./assets/logo.png" width="40%">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="titulo-app-div">
+            <img src="./assets/logo.png" width="90%">
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="seletor-visualizacao">
+            Visualizar dados 
+            <select>
+              <option value="volvo">agregados</option>
+              <option value="saab">por juiz</option>
+              <option value="opel">por região</option>
+            </select>
+          </div>
+        </div>
       </div>
       <div class="slider-seletor">
         <div class="titulo-slider">Auxílio Moradia: {{ auxMoradiaEscolhido | currency:'BRL' }}</div>

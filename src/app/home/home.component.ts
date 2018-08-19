@@ -39,10 +39,10 @@ export class HomeComponent implements OnInit {
     this.msg = "";
     this.metrica = 'Moradias Populares';
     this.metricIcon = 'fa fa-home fa-2x';
-    this.auxMoradia = 76000000;
-    this.auxPreEscola = 500000;
-    this.auxSaude = 23000000;
-    this. auxOutros = 5000000;
+    this.auxMoradia = 76639541;
+    this.auxPreEscola = 592846;
+    this.auxSaude = 23928352;
+    this. auxOutros = 5083726;
 
     this.auxMoradiaEscolhido = 0;
     this.auxPreEscolaEscolhido = 0;
@@ -133,35 +133,33 @@ export class HomeComponent implements OnInit {
         'qtd': 0
       },
       {
-        'nome': 'Panetones',
-        'preco': 13,
+        'nome': 'Partos Normais',
+        'preco': 1500,
+        'qtd': 0
+      },
+      {
+        'nome': ' Alunos por ano',
+        'preco': 2500,
+        'qtd': 0
+      },
+      {
+        'nome': 'Togas',
+        'preco': 300,
         'qtd': 0
       },
       {
         'nome': 'Panelas pra bater',
         'preco': 45,
         'qtd': 0
-      }
-      ,
+      },
       {
         'nome': 'Champagne Chandon',
         'preco': 76,
         'qtd': 0
       },
       {
-        'nome': 'Coxinhas',
-        'preco': 60000,
-        'qtd': 0
-      },
-      {
-        'nome': ' Bolsas Chanel',
-        'preco': 314,
-        'qtd': 0
-      }
-      ,
-      {
-        'nome': ' Alunos por ano',
-        'preco': 2500,
+        'nome': 'Perus natalinos',
+        'preco': 60,
         'qtd': 0
       }
     ]
